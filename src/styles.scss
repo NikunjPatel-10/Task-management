@@ -4,6 +4,9 @@
 @import '../node_modules/bootstrap-icons/font/bootstrap-icons.scss';
 /* Importing Bootstrap SCSS file. */
 
+// for ngselect 
+@import "~@ng-select/ng-select/themes/material.theme.css";
+
 // for base file
 @import '../src/assets/scss/Base/index';
 

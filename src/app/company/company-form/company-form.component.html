@@ -1,1 +1,76 @@
-<p>company-form works!</p>
+<div class="h-100 w-100  d-flex justify-content-center ">
+    <div class="   w-100 m-5">
+        <form class="row g-3  border border-dark p-3 w-100" [formGroup]="companyForm">
+            <!-- companyname  -->
+            <div class="">
+
+                <input type="text" class="form-control " placeholder="companyname" id="validationServer01"
+                    formControlName="companyname"
+                    [ngClass]="{'is-valid': companyFormControl['companyname'].valid, 'is-invalid': companyFormControl['companyname'].invalid && companyFormControl['companyname'].touched }">
+                <div
+                    *ngIf="companyFormControl['companyname']?.invalid && (isSubmitted || (companyFormControl['companyname'].touched || companyFormControl['companyname'].dirty) )">
+                    <span class="text-danger" *ngIf="companyFormControl['companyname'].errors?.['required']">This field
+                        is required</span>
+                    <span class="text-danger" *ngIf="companyFormControl['companyname'].errors?.['pattern']">Only
+                        Characters & numbers are allowed to write it</span>
+                    <span class="text-danger" *ngIf="companyFormControl['companyname'].errors?.['minlength']">Minimum 6
+                        characters are required</span>
+                </div>
+            </div>
+            <!-- company-description -->
+            <div class="">
+                <textarea class="form-control " placeholder="Company description" id="floatingTextarea2"
+                    style="height: 100px" formControlName="companydescription"
+                    [ngClass]="{'is-valid':companyFormControl['companydescription'].valid, 'is-invalid':companyFormControl['companydescription'].invalid && companyFormControl['companydescription'].touched}"></textarea>
+                <div
+                    *ngIf="companyFormControl['companydescription']?.invalid && (isSubmitted || (companyFormControl['companydescription'].touched || companyFormControl['companydescription'].dirty) )">
+                    <span class="text-danger" *ngIf="companyFormControl['companydescription'].errors?.['required']">This
+                        field is
+                        required</span>
+                </div>
+            </div> 
+            <!-- company-tags -->
+            <div class="">
+                <ng-select [items]="languages"
+                class="form-control" 
+                appendTo="body"
+                bindLabel="name"
+                 bindValue="name" 
+                 [multiple]="true" 
+                 formControlName="companytags"
+                 placeholder="Company tags">
+                    <ng-option *ngFor="let data of languages">{{data.name}} </ng-option>
+                </ng-select>
+                <div
+                    *ngIf="companyFormControl['companytags']?.invalid && (isSubmitted || (companyFormControl['companytags'].touched || companyFormControl['companytags'].dirty) )">
+                    <span class="text-danger" *ngIf="companyFormControl['companytags'].errors?.['required']">This
+                        field is
+                        required</span>
+                </div>
+
+            </div>
+            <div class="">
+
+                <input type="text" class="form-control " id="validationServer01" placeholder="select logo"
+                    formControlName="companylogo">
+                <div
+                    *ngIf="companyFormControl['companylogo']?.invalid && (isSubmitted || (companyFormControl['companylogo'].touched || companyFormControl['companylogo'].dirty) )">
+                    <span class="text-danger" *ngIf="companyFormControl['companylogo'].errors?.['required']">This field
+                        is
+                        required</span>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <div></div>
+                <div>
+                    <button class="p-2 me-3 btn btn-danger btn-lg">Cancel</button>
+                    <button class="p-2 btn btn-primary btn-lg" (click)="SaveCompanyForm()"> Save</button>
+                    <!-- <button class="p-2 btn btn-primary btn-lg" (click)="saveCopmanyList()" *ngIf=this.id>
+                        Update</button> -->
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</div>

@@ -6,6 +6,8 @@ import { CompanyComponent } from './company.component';
 import { CompanyFormComponent } from './company-form/company-form.component';
 import { CompanyListComponent } from './company-list/company-list.component';
 import { CompanyPipe } from './pipe/company.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 @NgModule({
@@ -17,7 +19,10 @@ import { CompanyPipe } from './pipe/company.pipe';
   ],
   imports: [
     CommonModule,
-    CompanyRoutingModule
+    CompanyRoutingModule,
+    ReactiveFormsModule,
+    NgSelectModule,
+    FormsModule
   ]
 })
 export class CompanyModule { }
