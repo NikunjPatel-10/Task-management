@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { CompanyRoutingModule } from './company-routing.module';
 import { CompanyComponent } from './company.component';
-import { FormComponent } from './form/form.component';
 import { CompanyFormComponent } from './company-form/company-form.component';
 import { CompanyListComponent } from './company-list/company-list.component';
 import { CompanyPipe } from './pipe/company.pipe';
@@ -12,7 +11,6 @@ import { CompanyPipe } from './pipe/company.pipe';
 @NgModule({
   declarations: [
     CompanyComponent,
-    FormComponent,
     CompanyFormComponent,
     CompanyListComponent,
     CompanyPipe
