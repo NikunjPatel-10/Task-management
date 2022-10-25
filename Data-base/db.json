@@ -1,0 +1,11 @@
+{
+    "companyList":[
+        {
+            "id":1,
+            "companyname":"yahoo",
+            "companydescription":"amazing",
+            "companytags":"lavarel",
+            "companylogo":"YaHoo"
+        }
+    ]
+}

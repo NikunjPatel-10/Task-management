@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CompanyService } from '../service/company.service';
 
 @Component({
   selector: 'app-company-list',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./company-list.component.scss']
 })
 export class CompanyListComponent implements OnInit {
-
-  constructor() { }
+public companyData:any
+  constructor(private companyservice:CompanyService) { }
 
   ngOnInit(): void {
+    this.GetCompanyList()
+  }
+
+  GetCompanyList(){
+    this.companyservice.GetData().subscribe(res=>{
+      console.log(res); 
+      console.log("hello"); 
+      this.companyData = res
+    })
   }
 
 }
