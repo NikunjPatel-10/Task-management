@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CompanyService } from '../service/company.service';
+import { DataCommunicationService } from '../service/data-communication.service';
 
 @Component({
   selector: 'app-company-form',
@@ -19,7 +21,12 @@ export class CompanyFormComponent implements OnInit {
 ];
   public companyForm: FormGroup;
   public isSubmitted:boolean
-  constructor(private formbuilder: FormBuilder) {
+  /**
+   * 
+   * @param formbuilder 
+   * @param companyservice 
+   */
+  constructor(private formbuilder: FormBuilder, private companyservice:CompanyService , private datacommunication:DataCommunicationService) {
     this.isSubmitted = false
     this.companyForm = this.formbuilder.group({
 
@@ -35,8 +42,12 @@ export class CompanyFormComponent implements OnInit {
 
   SaveCompanyForm(){
     this.isSubmitted = true
-    console.log(this.companyForm.value);
-    
+    this.companyservice.PostData(this.companyForm.value).subscribe(res=>{
+      this.datacommunication.companyListData(res)  
+     
+    })
+    this.isSubmitted = false
+    this.companyForm.reset();   
   }
 
   get companyFormControl() {

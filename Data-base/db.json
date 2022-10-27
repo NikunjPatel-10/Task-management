@@ -1,11 +1,65 @@
 {
-    "companyList":[
-        {
-            "id":1,
-            "companyname":"yahoo",
-            "companydescription":"amazing",
-            "companytags":"lavarel",
-            "companylogo":"YaHoo"
-        }
-    ]
+  "companyList": [
+    {
+      "id": 1,
+      "companyname": "yahoo",
+      "companydescription": "amazing",
+      "companytags": "lavarel",
+      "companylogo": "YaHoo"
+    },
+    {
+      "companyname": "Nikunj",
+      "companydescription": "mb",
+      "companytags": [
+        "CSS"
+      ],
+      "companylogo": "N",
+      "id": 2
+    },
+    {
+      "companyname": "kuhkdf",
+      "companydescription": "wed",
+      "companytags": [
+        "Angular"
+      ],
+      "companylogo": "U",
+      "id": 3
+    },
+    {
+      "companyname": "bhumin",
+      "companydescription": "adsx",
+      "companytags": [
+        "Javascript"
+      ],
+      "companylogo": "fdfdc",
+      "id": 4
+    },
+    {
+      "companyname": "rttyty",
+      "companydescription": "fnfgn",
+      "companytags": [
+        "Python"
+      ],
+      "companylogo": "R",
+      "id": 5
+    },
+    {
+      "companyname": "jfdfdfgg",
+      "companydescription": "fgfg",
+      "companytags": [
+        "CSS"
+      ],
+      "companylogo": "xcx",
+      "id": 6
+    },
+    {
+      "companyname": "asdfghj",
+      "companydescription": "cvb",
+      "companytags": [
+        "HTML"
+      ],
+      "companylogo": "as",
+      "id": 7
+    }
+  ]
 }
