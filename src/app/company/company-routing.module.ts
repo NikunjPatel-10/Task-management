@@ -15,6 +15,10 @@ const routes: Routes = [{
     {
       path: 'add',
       component: CompanyFormComponent
+    },
+    {
+      path:'edit/:id',
+      component:CompanyFormComponent
     }
   ]
 
