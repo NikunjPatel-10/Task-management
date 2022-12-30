@@ -3,13 +3,14 @@
     <div class="fs-2">Client</div>
     <div><span class="bi bi-plus-circle fs-2" [routerLink]="['add']"></span></div>
   </div>
-    <input type="text" placeholder="Search" class="my-2 p-2 w-100">
-<ul class="nav  p-2 border border-primary">
-  <li class="nav-item d-flex justify-content-between  h-100 w-100 border border-dark my-1 p-1" *ngFor="let data of companyData">
-    <span class="text-dark" aria-current="page" >{{data.companyname}}</span>
-    <span class="text-dark" aria-current="page" >{{data.companydescription}}</span>
-    <span class="text-dark" aria-current="page" >{{data.companylogo}}</span>
-    <span class="text-dark"><a class="bi bi-trash3-fill"></a></span>
-  </li>
-</ul>
+  <input type="text" placeholder="Search" class="my-2 p-2 w-100">
+  <ul class="nav  p-2 border border-primary">
+    <li class="nav-item d-flex justify-content-between  h-100 w-100 border border-dark my-1 p-1"
+      *ngFor="let data of companyData" (click)="editCompanyList(data.id)">
+      <span class="text-dark" aria-current="page">{{data.companyname}}</span>
+      <span class="text-dark" aria-current="page">{{data.companydescription}}</span>
+      <span class="text-dark" aria-current="page">{{data.companylogo}}</span>
+        <span class="text-dark" ><a class="bi bi-trash3-fill" (click)="deleteCompanyList(data.id)"></a></span>
+    </li>
+  </ul>
 </div>
