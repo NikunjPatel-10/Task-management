@@ -19,23 +19,31 @@
       "id": 5
     },
     {
-      "companyname": "rttyty",
-      "companydescription": "dfvf bgb ",
+      "companyname": "bhumin",
+      "companydescription": "gfefdfghfgfghh",
       "companytags": [
-        "Javascript"
+        "React"
       ],
-      "companylogo": "dsc",
+      "companylogo": "ffggggh",
       "id": 6
     },
     {
-      "companyname": "kuhkkk",
-      "companydescription": "fmdmf ",
+      "companyname": "rttyty",
+      "companydescription": "cdkcdyg n",
       "companytags": [
-        "HTML",
-        "Javascript"
+        "CSS"
       ],
-      "companylogo": "vnnnb hbhvh",
+      "companylogo": "dhfdtef",
       "id": 7
+    },
+    {
+      "companyname": "oneRivet",
+      "companydescription": "fvm f v",
+      "companytags": [
+        "HTML"
+      ],
+      "companylogo": "f,,b,n",
+      "id": 8
     }
   ]
 }

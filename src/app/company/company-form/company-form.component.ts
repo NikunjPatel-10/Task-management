@@ -33,10 +33,10 @@ export class CompanyFormComponent implements OnInit {
    * @param activatedRoute 
    */
   constructor(private formbuilder: FormBuilder,
-     private companyservice: CompanyService,
-      private datacommunication: DataCommunicationService,
-       private activatedRoute: ActivatedRoute ,
-       private router : Router) {
+    private companyservice: CompanyService,
+    private datacommunication: DataCommunicationService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router) {
     this.text = '';
     this.isSubmitted = false
     this.companyForm = this.formbuilder.group({

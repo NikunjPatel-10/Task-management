@@ -9,6 +9,7 @@ import { CompanyPipe } from './pipe/company.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { CompanyService } from './service/company.service';
+import { SearchPipe } from './pipe/search.pipe';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { CompanyService } from './service/company.service';
     CompanyComponent,
     CompanyFormComponent,
     CompanyListComponent,
-    CompanyPipe
+    CompanyPipe,
+    SearchPipe
   ],
   imports: [
     CommonModule,
@@ -26,6 +28,7 @@ import { CompanyService } from './service/company.service';
     FormsModule,
     
   ],
+  
   providers:[CompanyService]
 })
 export class CompanyModule { }

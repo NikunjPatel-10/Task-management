@@ -14,7 +14,7 @@ export class CompanyListComponent implements OnInit {
   public id!: number
   public deleteData: any
   public data: any
-
+  public filterData: any
   /**
    * 
    * @param companyservice 
